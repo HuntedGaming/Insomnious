@@ -35,10 +35,12 @@ public class Win : MonoBehaviour
         yield return new WaitForSeconds(5);
         if (PlayerPrefs.GetInt("Challenge") == 1 && PlayerPrefs.GetInt("NormalMode") < 3)
         {
-            SceneManager.LoadScene(1);
+            PlayerPrefs.SetInt("LoadMe", 1);
+            SceneManager.LoadScene(5);
             PlayerPrefs.SetInt("NormalMode", PlayerPrefs.GetInt("NormalMode") + 1);
         }else{
-            SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("LoadMe", 0);
+            SceneManager.LoadScene(5);
         }
     }
 }

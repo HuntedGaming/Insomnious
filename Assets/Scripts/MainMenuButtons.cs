@@ -61,7 +61,8 @@ public class MainMenuButtons : MonoBehaviour
     {
         PlayerPrefs.SetInt("NormalMode", 1);
         PlayerPrefs.SetInt("Challenge", 1);
-        SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("LoadMe", 1);
+        SceneManager.LoadScene(5);
     }
 
     // Takes the player to the main game.
@@ -72,13 +73,15 @@ public class MainMenuButtons : MonoBehaviour
         {
             PlayerPrefs.SetInt("NormalMode", 3);
         }
-        SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("LoadMe", 1);
+        SceneManager.LoadScene(5);
     }
 
     // Takes the player to the custom night mode.
     public void CustomNight()
     {
-        SceneManager.LoadScene(2);
+        PlayerPrefs.SetInt("LoadMe", 2);
+        SceneManager.LoadScene(5);
     }
 
     // Opens the options menu.

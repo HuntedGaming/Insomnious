@@ -15,6 +15,7 @@ public class GameOverScreen : MonoBehaviour
     IEnumerator BackToMenu()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene(0);
+        PlayerPrefs.SetInt("LoadMe", 0);
+        SceneManager.LoadScene(5);
     }
 }

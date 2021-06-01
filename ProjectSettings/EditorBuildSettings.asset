@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadScreen.unity
     guid: 53f7fa9a5256fd54ba97329316e164a7
+  - enabled: 1
+    path: Assets/Scenes/ChallengeMode.unity
+    guid: c48af3c87fb8e5f429dd50de5c0361ff
   m_configObjects: {}

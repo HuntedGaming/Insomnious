@@ -77,6 +77,13 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
+    // Takes the player to the Challenge mode.
+    public void ChallengeMode()
+    {
+        PlayerPrefs.SetInt("LoadMe", 6);
+        SceneManager.LoadScene(5);
+    }
+
     // Takes the player to the custom night mode.
     public void CustomNight()
     {

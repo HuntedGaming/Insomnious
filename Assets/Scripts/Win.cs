@@ -22,6 +22,15 @@ public class Win : MonoBehaviour
             case 3:
                 PlayerPrefs.SetInt("Complete3", 1);
                 break;
+            case 4:
+                PlayerPrefs.SetInt("Complete4", 1);
+                break;
+            case 5:
+                PlayerPrefs.SetInt("Complete5", 1);
+                break;
+            case 6:
+                PlayerPrefs.SetInt("Complete6", 1);
+                break;
         }
         StartCoroutine(NextNight());
     }

@@ -14,9 +14,9 @@ public class Sleep : MonoBehaviour
 
     // Everything related to UI.
     public Image sleepBar;
-    public TMP_Text wakeUp;
     public GameObject nightmareJumpscare;
     public GameObject sleepBack;
+    public TMP_Text hintText;
 
     // Everything related to monsters.
     public bool isAsleep;
@@ -32,7 +32,7 @@ public class Sleep : MonoBehaviour
         deadSleepTimer = 0f;
         isAsleep = false;
         sleepBar.fillAmount = 0f;
-        wakeUp.text = "";
+        hintText.text = "";
     }
 
     // Update is called once per frame.
@@ -77,11 +77,11 @@ public class Sleep : MonoBehaviour
         // When asleep the player cannot move.
         if (isAsleep == true)
         {
+            hintText.text = "Press E to wake up";
             // Everything related to sleep timers and progress.
             sleepTimer += Time.deltaTime;
             deadSleepTimer += Time.deltaTime;
             sleepBar.fillAmount = sleepTimer / sleepFor;
-            wakeUp.text = "Press E to wake up";
             
             // Everything related to the player.
             player.GetComponent<CharacterMovement>().speed = 0;
@@ -94,8 +94,7 @@ public class Sleep : MonoBehaviour
         }
         else
         {
-            wakeUp.text = "";
-
+            hintText.text = "";
             // Everything related to the player.
             player.GetComponent<CharacterMovement>().speed = 12;
             player.GetComponent<MouseLook>().enabled = true;
@@ -115,6 +114,7 @@ public class Sleep : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        hintText.text = "Press SPACE to sleep";
         // When the player enters the trigger, set the dead sleep timer to 0.
         deadSleepTimer = 0f;
     }

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Monsters : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Monsters : MonoBehaviour
     int monsterAttackCounter;
     float monsterWaitTimer;
     public bool sleepAttack;
+    public TMP_Text hintText;
 
     // Everything related to the difficulty.
     public int difficultyGrade;
@@ -38,6 +40,7 @@ public class Monsters : MonoBehaviour
         monsterWaitTimer = monsterAttackTimer;
         sleepAttack = false;
         jumpscareAnimation.SetActive(false);
+        hintText.text = "";
 
         // Depending on the difficultyGrade, set the attackDifficult
         // to different numbers to make the monsters attack more or
@@ -123,6 +126,11 @@ public class Monsters : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // If the moster is active, show the hint.
+        if (monsterStageCounter > 1)
+        {
+            hintText.text = "Hold SPACE to suppress";
+        }
         // When the player enters the trigger, set the stop attack timer to 0.
         stopAttackTimer = 0f;
     }
@@ -148,5 +156,11 @@ public class Monsters : MonoBehaviour
             stopAttackTimer = 0f;
             timerWheel.gameObject.SetActive(false);
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        // When the player leaves the trigger, hide the text.
+        hintText.text = "";
     }
 }

@@ -1936,6 +1936,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 960010126}
+    - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
       propertyPath: timerWheel
       value: 
       objectReference: {fileID: 960010133}
@@ -3248,6 +3252,10 @@ PrefabInstance:
       propertyPath: youDied
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 960010126}
     - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
       propertyPath: timerWheel
       value: 
@@ -5015,6 +5023,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8612328268529022210, guid: 4eb1ea37c9684664aa7fb4913681d0d1, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 960010126}
+    - target: {fileID: 8612328268529022210, guid: 4eb1ea37c9684664aa7fb4913681d0d1, type: 3}
       propertyPath: sleepBar
       value: 
       objectReference: {fileID: 960010125}
@@ -5447,6 +5459,10 @@ PrefabInstance:
       propertyPath: youDied
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6167231152601157579, guid: 66a70523eaceba548b810d2ab85a3247, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 960010126}
     - target: {fileID: 6167231152601157579, guid: 66a70523eaceba548b810d2ab85a3247, type: 3}
       propertyPath: timerWheel
       value: 
@@ -7109,6 +7125,10 @@ PrefabInstance:
       propertyPath: youDied
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 960010126}
     - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
       propertyPath: timerWheel
       value: 

@@ -32,7 +32,6 @@ public class Sleep : MonoBehaviour
         deadSleepTimer = 0f;
         isAsleep = false;
         sleepBar.fillAmount = 0f;
-        hintText.text = "";
     }
 
     // Update is called once per frame.
@@ -94,7 +93,6 @@ public class Sleep : MonoBehaviour
         }
         else
         {
-            hintText.text = "";
             // Everything related to the player.
             player.GetComponent<CharacterMovement>().speed = 12;
             player.GetComponent<MouseLook>().enabled = true;
@@ -114,13 +112,13 @@ public class Sleep : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        hintText.text = "Press SPACE to sleep";
         // When the player enters the trigger, set the dead sleep timer to 0.
         deadSleepTimer = 0f;
     }
 
     void OnTriggerStay(Collider other)
     {
+        hintText.text = "Press SPACE to sleep";
         // When the player is in the trigger and presses the space bar, set
         // isAsleep to true.
         if (other.gameObject.tag == "Player" && Input.GetKey("space"))
@@ -129,8 +127,15 @@ public class Sleep : MonoBehaviour
         }
         if (Input.GetKey("e") && isAsleep == true)
         {
+            hintText.text = "";
             deadSleepTimer = 0f;
             isAsleep = false;
         }
+    }
+    
+    // Hide the Hint after leaving the trigger area.
+    void OnTriggerExit(Collider other)
+    {
+        hintText.text = "";
     }
 }

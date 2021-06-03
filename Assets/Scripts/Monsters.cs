@@ -40,7 +40,6 @@ public class Monsters : MonoBehaviour
         monsterWaitTimer = monsterAttackTimer;
         sleepAttack = false;
         jumpscareAnimation.SetActive(false);
-        hintText.text = "";
 
         // Depending on the difficultyGrade, set the attackDifficult
         // to different numbers to make the monsters attack more or
@@ -126,17 +125,18 @@ public class Monsters : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // If the moster is active, show the hint.
-        if (monsterStageCounter > 1)
-        {
-            hintText.text = "Hold SPACE to suppress";
-        }
         // When the player enters the trigger, set the stop attack timer to 0.
         stopAttackTimer = 0f;
     }
 
     void OnTriggerStay(Collider other)
     {
+        // If the moster is active, show the hint.
+        if (monsterStageCounter > 1)
+        {
+            hintText.text = "Hold SPACE to suppress";
+        }
+
         // If the monster is more active then stage 1, and the player is
         // holding down the space bar, star reversing the monster's progress.
         if (other.gameObject.tag == "Player" && monsterStageCounter > 1 && Input.GetKey("space"))

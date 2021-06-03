@@ -9,6 +9,8 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject areYouSure;
     public GameObject clearData;
     public GameObject success;
+    public GameObject fontsUsed;
+
     public AudioMixer mixer;
 
     public GameObject Star1;
@@ -161,6 +163,9 @@ public class MainMenuButtons : MonoBehaviour
         PlayerPrefs.SetInt("Complete1", 0);
         PlayerPrefs.SetInt("Complete2", 0);
         PlayerPrefs.SetInt("Complete3", 0);
+        PlayerPrefs.SetInt("Complete4", 0);
+        PlayerPrefs.SetInt("Complete5", 0);
+        PlayerPrefs.SetInt("Complete6", 0);
         Star1.SetActive(false);
         Star2.SetActive(false);
         Star3.SetActive(false);
@@ -173,6 +178,19 @@ public class MainMenuButtons : MonoBehaviour
     {
         optionsMenu.SetActive(false);
     }
+
+    // Opens all the information about the copyright for the fonts used.
+    public void FontCopyright()
+    {
+        fontsUsed.SetActive(true);
+    }
+
+    // Closes all the information about the copyright for the fonts used.
+    public void CloseFontCopyright()
+    {
+        fontsUsed.SetActive(false);
+    }
+
 
     // Asks if you want to quit before closing the game.
     public void QuitMenu()

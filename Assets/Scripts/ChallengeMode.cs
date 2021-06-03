@@ -130,18 +130,18 @@ public class ChallengeMode : MonoBehaviour
 
         // Sets the monster difficulty for each monster.
         Monsters mon1 = monster1.GetComponent<Monsters>();
-        mon1.difficultyGrade = 2;
+        mon1.difficultyGrade = 1;
         Monsters mon2 = monster2.GetComponent<Monsters>();
-        mon2.difficultyGrade = 4;
+        mon2.difficultyGrade = 2;
         Monsters mon3 = monster3.GetComponent<Monsters>();
-        mon3.difficultyGrade = 1;
+        mon3.difficultyGrade = 3;
         Monsters mon4 = monster4.GetComponent<Monsters>();
-        mon4.difficultyGrade = 1;
+        mon4.difficultyGrade = 4;
 
         // Sets the sleep timer and dead sleep timer for the bed.
         Sleep slp = bed.GetComponent<Sleep>();
-        slp.sleepFor = 60;
-        slp.deadSleepFor = 20;
+        slp.sleepFor = 240;
+        slp.deadSleepFor = 120;
 
         PlayerPrefs.SetInt("Challenge", 6);
     }

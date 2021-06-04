@@ -379,6 +379,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 2026009303}
+    - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
       propertyPath: timerWheel
       value: 
       objectReference: {fileID: 497299280}
@@ -709,6 +713,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 2026009303}
+    - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
       propertyPath: timerWheel
       value: 
       objectReference: {fileID: 497299280}
@@ -870,6 +878,10 @@ PrefabInstance:
       propertyPath: youDied
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
+      propertyPath: hintText
+      value: 
+      objectReference: {fileID: 2026009303}
     - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
       propertyPath: timerWheel
       value: 

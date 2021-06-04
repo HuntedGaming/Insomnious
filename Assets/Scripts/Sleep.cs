@@ -47,9 +47,11 @@ public class Sleep : MonoBehaviour
                 Monsters slpAtk = mons.GetComponent<Monsters>();
                 if (slpAtk.sleepAttack == true && isAsleep == true)
                 {
+                    nightmareJumpscare.SetActive(false);
+                    sleepBack.SetActive(false);
+                    hintText.text = "";
                     slpAtk.jumpscareAnimation.SetActive(true);
                     slpAtk.JumpScare.Play();
-                    mons.SetActive(false);
                     slpAtk.jumpscareAnimation.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
                 }
 
@@ -57,9 +59,7 @@ public class Sleep : MonoBehaviour
                 // the character dies.
                 if (deadSleepTimer >= deadSleepFor)
                 {
-                    // Game over screen.
-                    slpAtk.enabled = false;
-                    mons.SetActive(false);
+                    SceneManager.LoadScene(3);
                     
                 }
 

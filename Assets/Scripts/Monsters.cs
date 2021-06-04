@@ -109,6 +109,7 @@ public class Monsters : MonoBehaviour
                 sleepAttack = true;
                 break;
             case (5):
+                hintText.text = "";
                 jumpscareAnimation.SetActive(true);
                 JumpScare.Play();
                 jumpscareAnimation.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
@@ -131,12 +132,6 @@ public class Monsters : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        // If the moster is active, show the hint.
-        if (monsterStageCounter > 1)
-        {
-            hintText.text = "Hold SPACE to suppress";
-        }
-
         // If the monster is more active then stage 1, and the player is
         // holding down the space bar, star reversing the monster's progress.
         if (other.gameObject.tag == "Player" && monsterStageCounter > 1 && Input.GetKey("space"))
@@ -155,6 +150,12 @@ public class Monsters : MonoBehaviour
         {
             stopAttackTimer = 0f;
             timerWheel.gameObject.SetActive(false);
+        }
+
+        // If the moster is active, show the hint.
+        if (monsterStageCounter > 1)
+        {
+            hintText.text = "Hold SPACE to suppress";
         }
     }
 

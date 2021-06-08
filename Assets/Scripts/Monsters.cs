@@ -13,7 +13,6 @@ public class Monsters : MonoBehaviour
     public AudioSource transition1;
     public AudioSource transition2;
     public AudioSource transition3;
-    public AudioSource JumpScare;
     public float monsterAttackTimer;
     public int monsterAggression;
     int monsterStageCounter;
@@ -137,7 +136,6 @@ public class Monsters : MonoBehaviour
                 sleepBar.SetActive(false);
                 hintText.text = "";
                 jumpscareAnimation.SetActive(true);
-                JumpScare.Play();
                 jumpscareAnimation.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
                 break;
         }

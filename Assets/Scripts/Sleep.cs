@@ -51,7 +51,6 @@ public class Sleep : MonoBehaviour
                     sleepBack.SetActive(false);
                     hintText.text = "";
                     slpAtk.jumpscareAnimation.SetActive(true);
-                    slpAtk.JumpScare.Play();
                     slpAtk.jumpscareAnimation.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
                 }
 

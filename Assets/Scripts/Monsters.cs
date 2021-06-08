@@ -29,7 +29,7 @@ public class Monsters : MonoBehaviour
 
     // Related to dying.
     public GameObject[] otherMons;
-    public GameObject player;
+    public GameObject sleepBar;
 
     public Image timerWheel;
 
@@ -40,6 +40,7 @@ public class Monsters : MonoBehaviour
         monsterWaitTimer = monsterAttackTimer;
         sleepAttack = false;
         jumpscareAnimation.SetActive(false);
+        sleepBar.SetActive(true);
 
         // Depending on the difficultyGrade, set the attackDifficult
         // to different numbers to make the monsters attack more or
@@ -85,7 +86,9 @@ public class Monsters : MonoBehaviour
                 monsterStageCounter++;
             }
         }
-
+        bool tran1Done = false;
+        bool tran2Done = false;
+        bool tran3Done = false;
         // Depending on which stage the mosnter is in, have
         // the animator play certain animations. If the
         // monster reaches stage 4, the player dies.
@@ -93,22 +96,45 @@ public class Monsters : MonoBehaviour
         {
             case (1):
                 monsterAnimation.SetInteger("MonsterStage", 1);
-                transition1.Play();
+                if (!tran1Done)
+                {
+                    transition1.volume = Random.Range(0.8f, 1);
+                    transition1.pitch = Random.Range(0.8f, 1.1f);
+                    transition1.Play();
+                    tran1Done = true;
+                }
+                tran2Done = false;
                 break;
             case (2):
                 monsterAnimation.SetInteger("MonsterStage", 2);
-                transition2.Play();
+                if (!tran2Done)
+                {
+                    transition2.volume = Random.Range(0.8f, 1);
+                    transition2.pitch = Random.Range(0.8f, 1.1f);
+                    transition2.Play();
+                    tran2Done = true;
+                }
+                tran1Done = false;
+                tran3Done = false;
                 break;
             case (3):
                 monsterAnimation.SetInteger("MonsterStage", 3);
                 sleepAttack = false;
-                transition3.Play();
+                if (!tran3Done)
+                {
+                    transition3.volume = Random.Range(0.8f, 1);
+                    transition3.pitch = Random.Range(0.8f, 1.1f);
+                    transition3.Play();
+                    tran3Done = true;
+                }
+                tran2Done = false;
                 break;
             case (4):
                 monsterAnimation.SetInteger("MonsterStage", 4);
                 sleepAttack = true;
                 break;
             case (5):
+                sleepBar.SetActive(false);
                 hintText.text = "";
                 jumpscareAnimation.SetActive(true);
                 JumpScare.Play();

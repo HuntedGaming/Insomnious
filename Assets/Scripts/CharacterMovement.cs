@@ -3,6 +3,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController charaControl;
+    public AudioSource walk;
 
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -29,6 +30,12 @@ public class CharacterMovement : MonoBehaviour
 
         // Move the player based on the inputs above.
         charaControl.Move(move * speed * Time.deltaTime);
+        if (charaControl.velocity.magnitude > 2f && walk.isPlaying == false)
+        {
+            walk.volume = Random.Range(0.8f, 1);
+            walk.pitch = Random.Range(0.8f, 1.1f);
+            walk.Play();
+        }
 
         // Pull the character around based on their velocity and time between frames.
         charaControl.Move(velocity * Time.deltaTime);

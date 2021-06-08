@@ -28,6 +28,7 @@ public class Monsters : MonoBehaviour
 
     // Related to dying.
     public GameObject[] otherMons;
+    public CharacterMovement player;
     public GameObject sleepBar;
 
     public Image timerWheel;
@@ -133,6 +134,7 @@ public class Monsters : MonoBehaviour
                 sleepAttack = true;
                 break;
             case (5):
+                player.speed = 0;
                 sleepBar.SetActive(false);
                 hintText.text = "";
                 jumpscareAnimation.SetActive(true);

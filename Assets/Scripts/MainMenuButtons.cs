@@ -46,6 +46,15 @@ public class MainMenuButtons : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    void Update()
+    {
+        // If the player presses escape, ask if they want to quit.
+        if (Input.GetButtonDown("Cancel"))
+        {
+            areYouSure.SetActive(true);
+        }
+    }
+
     // Ask if you want to create a new save game.
     public void AskNewGame()
     {

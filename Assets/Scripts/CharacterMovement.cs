@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -39,5 +40,11 @@ public class CharacterMovement : MonoBehaviour
 
         // Pull the character around based on their velocity and time between frames.
         charaControl.Move(velocity * Time.deltaTime);
+
+        // If the player presses escape, they are sent back to the main menu scene.
+        if (Input.GetButtonDown("Cancel"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

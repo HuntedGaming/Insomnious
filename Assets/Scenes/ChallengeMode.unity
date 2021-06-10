@@ -183,7 +183,7 @@ MonoBehaviour:
   m_text: Challenge 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_text: Nightmare timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_text: 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1931,6 +1931,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2132096052}
     m_Modifications:
+    - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 387956821}
     - target: {fileID: 7017289578725682936, guid: 0058e79a58a471f4597bd07abbb26440, type: 3}
       propertyPath: youDied
       value: 
@@ -2184,7 +2188,7 @@ MonoBehaviour:
   m_text: Challenge 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2329,6 +2333,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7223552049422357235, guid: c8c7e4b5bae4e8f41ac374784997a0ea, type: 3}
   m_PrefabInstance: {fileID: 387956818}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &387956821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7223552049422357233, guid: c8c7e4b5bae4e8f41ac374784997a0ea, type: 3}
+  m_PrefabInstance: {fileID: 387956818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387956819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64972a18abcc2143ae4dd49aad77c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &405247771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2589,7 +2604,7 @@ MonoBehaviour:
   m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2824,7 +2839,7 @@ MonoBehaviour:
   m_text: How long to sleep
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3167,7 +3182,7 @@ MonoBehaviour:
   m_text: 120
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3256,6 +3271,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 387956821}
     - target: {fileID: 7604876664703917294, guid: 8d15a02b07da1df42be5b253d07fddc4, type: 3}
       propertyPath: youDied
       value: 
@@ -4370,7 +4389,7 @@ MonoBehaviour:
   m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4706,7 +4725,7 @@ MonoBehaviour:
   m_text: How long to sleep
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5623,7 +5642,7 @@ MonoBehaviour:
   m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5753,6 +5772,10 @@ PrefabInstance:
       value: ThePainting
       objectReference: {fileID: 0}
     - target: {fileID: 6167231152601157579, guid: 66a70523eaceba548b810d2ab85a3247, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 387956821}
+    - target: {fileID: 6167231152601157579, guid: 66a70523eaceba548b810d2ab85a3247, type: 3}
       propertyPath: youDied
       value: 
       objectReference: {fileID: 0}
@@ -5856,7 +5879,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6471,7 +6494,7 @@ MonoBehaviour:
   m_text: '"The eye of the beholder"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6495,7 +6518,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.05
+  m_fontSize: 25.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6605,7 +6628,7 @@ MonoBehaviour:
   m_text: 240
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6814,7 +6837,7 @@ MonoBehaviour:
   m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7155,7 +7178,7 @@ MonoBehaviour:
   m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7289,7 +7312,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7426,6 +7449,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 387956821}
     - target: {fileID: 8604991283282076184, guid: fe4d834788d593947b3480e5f049b20a, type: 3}
       propertyPath: youDied
       value: 
@@ -7726,7 +7753,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7940,7 +7967,7 @@ MonoBehaviour:
   m_text: '"A good night''s rest"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7964,7 +7991,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.35
+  m_fontSize: 30.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8769,7 +8796,7 @@ MonoBehaviour:
   m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9519,7 +9546,7 @@ MonoBehaviour:
   m_text: Nightmare timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d6a531817d07544bb1edec166544921, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4112219631136537692, guid: 5d6a531817d07544bb1edec166544921, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

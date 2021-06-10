@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CurrentNight : MonoBehaviour
@@ -8,6 +9,7 @@ public class CurrentNight : MonoBehaviour
     public GameObject monster3;
     public GameObject monster4;
     public GameObject bed;
+    public GameObject instructions;
 
     // Start is called before the first frame update.
     void Start()
@@ -24,6 +26,7 @@ public class CurrentNight : MonoBehaviour
         switch (PlayerPrefs.GetInt("NormalMode"))
         {
             case 1:
+                StartCoroutine(Learn());
                 mon1.difficultyGrade = 1;
                 mon2.difficultyGrade = 2;
                 mon3.difficultyGrade = 1;
@@ -48,5 +51,12 @@ public class CurrentNight : MonoBehaviour
                 slp.deadSleepFor = 30;
                 break;
         }
+    }
+
+    IEnumerator Learn()
+    {
+        instructions.SetActive(true);
+        yield return new WaitForSeconds(3);
+        instructions.SetActive(false);
     }
 }

@@ -9,7 +9,6 @@ public class CustomNight : MonoBehaviour
     public GameObject cam1;
     public GameObject editor;
     public GameObject customStarter;
-    public GameObject menuMusic;
 
     // Every monster + bed.
     public GameObject monster1;
@@ -32,7 +31,6 @@ public class CustomNight : MonoBehaviour
         cam1.SetActive(true);
         editor.SetActive(true);
         customStarter.SetActive(false);
-        menuMusic = GameObject.Find("Music");
         monText1.text = "1";
         monText2.text = "1";
         monText3.text = "1";
@@ -104,7 +102,6 @@ public class CustomNight : MonoBehaviour
     // Button to start the game.
     public void StartGame()
     {
-        menuMusic.SetActive(false);
         if (Convert.ToInt32(monText1) == 5 && Convert.ToInt32(monText2) == 5 && Convert.ToInt32(monText3) == 5 && Convert.ToInt32(monText4) == 5 && Convert.ToInt32(sleepForText) == 120 && Convert.ToInt32(deadSleepForText) == 5)
         {
             PlayerPrefs.SetInt("Challenge", 3);

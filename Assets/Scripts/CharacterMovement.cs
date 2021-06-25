@@ -6,6 +6,9 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController charaControl;
     public AudioSource walk;
 
+    public GameObject musicParent;
+    public GameObject menuMusic;
+
     public float speed = 12f;
     public float gravity = -9.81f;
 
@@ -14,6 +17,9 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update.
     void Start()
     {
+        musicParent = GameObject.Find("MusicParent");
+        menuMusic = musicParent.transform.Find("Music").gameObject;
+        menuMusic.SetActive(false);
         charaControl = GetComponent<CharacterController>();
     }
 
@@ -44,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
         // If the player presses escape, they are sent back to the main menu scene.
         if (Input.GetButtonDown("Cancel"))
         {
+            menuMusic.SetActive(true);
             SceneManager.LoadScene(0);
         }
     }

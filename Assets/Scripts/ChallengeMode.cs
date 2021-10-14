@@ -7,7 +7,6 @@ public class ChallengeMode : MonoBehaviour
     public GameObject cam1;
     public GameObject selector;
     public GameObject challengeStarter;
-    public GameObject menuMusic;
 
     // Every monster + bed.
     public GameObject monster1;
@@ -30,7 +29,6 @@ public class ChallengeMode : MonoBehaviour
     void Start()
     {
         // Set all values to default
-        menuMusic = GameObject.Find("Music");
         cam1.SetActive(true);
         selector.SetActive(true);
         challengeStarter.SetActive(false);
@@ -68,7 +66,6 @@ public class ChallengeMode : MonoBehaviour
     // Starts the challenge.
     public void StartChallenge()
     {
-        menuMusic.SetActive(false);
         cam1.SetActive(false);
         selector.SetActive(false);
         challengeStarter.SetActive(true);

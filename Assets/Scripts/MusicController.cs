@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class MusicController : MonoBehaviour
 {
     public string instanceName;
-    public List<string> sceneNames;
 
     public AudioSource mainMneuMusic;
 
@@ -22,9 +21,6 @@ public class MusicController : MonoBehaviour
     {
         // delete any potential duplicates that might be in the scene already, keeping only this one .
         CheckForDuplicateInstances();
-
-        // check if this object should be deleted based on the input scene names given.
-        CheckIfSceneInList();
     }
 
     void CheckForDuplicateInstances()
@@ -42,23 +38,6 @@ public class MusicController : MonoBehaviour
                     DestroyImmediate(obj.gameObject);
                 }
             }
-        }
-    }
-
-    void CheckIfSceneInList()
-    {
-        // check what scene we are in and compare it to the list of strings.
-        string currentScene = SceneManager.GetActiveScene().name;
-
-        if (sceneNames.Contains(currentScene))
-        {
-            // keep the object alive.
-        }
-        else
-        {
-            // unsubscribe to the scene load callback.
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            DestroyImmediate(gameObject);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using Steamworks;
 using UnityEngine;
 
 public class CurrentNight : MonoBehaviour
@@ -41,6 +42,9 @@ public class CurrentNight : MonoBehaviour
                 mon4.difficultyGrade = 1;
                 slp.sleepFor = 80;
                 slp.deadSleepFor = 45;
+                if (!SteamManager.Initialized) { return; }
+                SteamUserStats.SetAchievement("Main1");
+                SteamUserStats.StoreStats();
                 break;
             case 3:
                 mon1.difficultyGrade = 3;
@@ -49,6 +53,9 @@ public class CurrentNight : MonoBehaviour
                 mon4.difficultyGrade = 2;
                 slp.sleepFor = 95;
                 slp.deadSleepFor = 30;
+                if (!SteamManager.Initialized) { return; }
+                SteamUserStats.SetAchievement("Main2");
+                SteamUserStats.StoreStats();
                 break;
         }
     }

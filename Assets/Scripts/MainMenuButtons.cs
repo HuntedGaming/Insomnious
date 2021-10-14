@@ -118,7 +118,8 @@ public class MainMenuButtons : MonoBehaviour
         {
             volume = -80;
         }
-        mixer.SetFloat("vol", volume);
+        PlayerPrefs.SetFloat("Volume", volume);
+        mixer.SetFloat("vol", PlayerPrefs.GetFloat("Volume"));
     }
 
     // Everything related to the toggle fullscreen option.

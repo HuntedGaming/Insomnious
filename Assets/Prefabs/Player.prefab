@@ -314,6 +314,7 @@ MonoBehaviour:
   walk: {fileID: 7927435264580997877}
   speed: 12
   gravity: -9.81
+  mixer: {fileID: 24100000, guid: d598dd1283fd07e4bb0545e728b5e9a7, type: 2}
 --- !u!114 &7223552049422357232
 MonoBehaviour:
   m_ObjectHideFlags: 0

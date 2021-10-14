@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -9,12 +10,19 @@ public class CharacterMovement : MonoBehaviour
     public float speed = 12f;
     public float gravity = -9.81f;
 
+    // The audio.
+    public AudioMixer mixer;
+
     Vector3 velocity;
 
     // Start is called before the first frame update.
     void Start()
     {
         charaControl = GetComponent<CharacterController>();
+
+        // Keeps the audio the same.
+        mixer.SetFloat("vol", PlayerPrefs.GetFloat("Volume"));
+
     }
 
     // Update is called once per frame.

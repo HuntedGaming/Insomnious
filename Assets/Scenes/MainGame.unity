@@ -551,6 +551,7 @@ MonoBehaviour:
   monster4: {fileID: 582183825}
   bed: {fileID: 8612328268793886327}
   instructions: {fileID: 1416457093}
+  mixer: {fileID: 24100000, guid: d598dd1283fd07e4bb0545e728b5e9a7, type: 2}
 --- !u!4 &1315265605
 Transform:
   m_ObjectHideFlags: 0

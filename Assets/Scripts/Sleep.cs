@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using Steamworks;
 using TMPro;
 
 public class Sleep : MonoBehaviour
@@ -11,6 +12,7 @@ public class Sleep : MonoBehaviour
     public float sleepFor;
     float deadSleepTimer;
     public float deadSleepFor;
+    int timesSlept;
 
     // Everything related to UI.
     public Image sleepBar;
@@ -32,6 +34,7 @@ public class Sleep : MonoBehaviour
         deadSleepTimer = 0f;
         isAsleep = false;
         sleepBar.fillAmount = 0f;
+        timesSlept = 0;
     }
 
     // Update is called once per frame.
@@ -65,6 +68,9 @@ public class Sleep : MonoBehaviour
                 // If the player successfully gets the sleepTimer to sleepFor, they win.
                 if (sleepTimer >= sleepFor)
                 {
+                    if (!SteamManager.Initialized) { return; }
+                    SteamUserStats.SetAchievement("Miscellaneous1");
+                    SteamUserStats.StoreStats();
                     SceneManager.LoadScene(4);
                 }
             }
@@ -123,6 +129,7 @@ public class Sleep : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKey("space"))
         {
             isAsleep = true;
+            timesSlept++;
         }
         if (Input.GetKey("e") && isAsleep == true)
         {
